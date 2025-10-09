@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formal Men's Shirt | ShopEase Fashion</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-tshirt me-2"></i>ShopEase Fashion
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Details -->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-gallery">
+          <img src="images/mens-shirt.jpg" id="mainProductImage" class="img-fluid rounded shadow" alt="Formal Men's Shirt">
+          <div class="d-flex mt-3">
+            <img src="images/mens-shirt.jpg" class="product-thumbnail active me-2" data-full="images/mens-shirt.jpg" alt="Thumbnail 1">
+            <img src="images/mens-shirt-2.jpg" class="product-thumbnail me-2" data-full="images/mens-shirt-2.jpg" alt="Thumbnail 2">
+            <img src="images/mens-shirt-3.jpg" class="product-thumbnail me-2" data-full="images/mens-shirt-3.jpg" alt="Thumbnail 3">
+            <img src="images/mens-shirt-4.jpg" class="product-thumbnail" data-full="images/mens-shirt-4.jpg" alt="Thumbnail 4">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-info">
+          <h2 class="product-title">Formal Men's Shirt</h2>
+          <div class="rating mb-3">
+            <span class="text-warning">★★★★☆</span> (4.2) 89 Reviews
+          </div>
+          <div class="price-section mb-3">
+            <h3 class="text-primary">₹1,299</h3>
+            <p class="text-muted"><s>₹1,799</s> <span class="text-success">28% off</span></p>
+          </div>
+          <p class="product-description">Premium quality formal shirt perfect for office wear and business meetings. Made with high-quality cotton fabric for all-day comfort. Features a modern slim fit design with wrinkle-free technology.</p>
+          
+          <div class="mb-4">
+            <h5>Size</h5>
+            <div class="size-options">
+              <input type="radio" class="btn-check" name="size" id="size-s" checked>
+              <label class="btn btn-outline-primary" for="size-s">S</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-m">
+              <label class="btn btn-outline-primary" for="size-m">M</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-l">
+              <label class="btn btn-outline-primary" for="size-l">L</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-xl">
+              <label class="btn btn-outline-primary" for="size-xl">XL</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-xxl">
+              <label class="btn btn-outline-primary" for="size-xxl">XXL</label>
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <h5>Color</h5>
+            <div class="size-options">
+              <input type="radio" class="btn-check" name="color" id="color-white" checked>
+              <label class="btn btn-outline-primary" for="color-white">White</label>
+              
+              <input type="radio" class="btn-check" name="color" id="color-blue">
+              <label class="btn btn-outline-primary" for="color-blue">Sky Blue</label>
+              
+              <input type="radio" class="btn-check" name="color" id="color-pink">
+              <label class="btn btn-outline-primary" for="color-pink">Light Pink</label>
+            </div>
+          </div>
+          
+          <div class="d-flex gap-3 mb-4">
+            <div class="quantity-selector">
+              <label for="quantity" class="form-label">Quantity</label>
+              <div class="d-flex align-items-center">
+                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex gap-3 mb-4">
+            <button class="btn btn-primary btn-lg flex-grow-1" onclick="addToCart()">
+              Add to Cart
+            </button>
+            <button class="btn btn-outline-primary btn-lg" onclick="buyNow()">Buy Now</button>
+          </div>
+          
+          <div class="mt-4">
+            <h5>Product Details</h5>
+            <ul>
+              <li>Material: 100% Premium Cotton</li>
+              <li>Care: Machine Wash</li>
+              <li>Fit: Slim Fit</li>
+              <li>Collar: Spread Collar</li>
+              <li>Sleeve: Full Sleeve</li>
+              <li>Pattern: Solid</li>
+              <li>Occasion: Formal, Office Wear</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Product Description -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Product Description</h4>
+        <p>This premium formal shirt is designed for the modern professional. Crafted from 100% cotton fabric, it offers exceptional comfort and breathability throughout your workday. The slim fit design gives you a sharp, tailored look while maintaining freedom of movement.</p>
+        <p>Features wrinkle-free technology that keeps you looking crisp and professional even after long hours. The spread collar design is perfect for wearing with or without a tie. Available in classic colors that match with any suit or trousers.</p>
+        
+        <h5 class="mt-4">Features:</h5>
+        <ul>
+          <li>Premium 100% cotton fabric for superior comfort</li>
+          <li>Wrinkle-free technology for all-day freshness</li>
+          <li>Slim fit design for a modern silhouette</li>
+          <li>Spread collar suitable for formal occasions</li>
+          <li>Available in multiple sizes and colors</li>
+          <li>Easy care - machine washable</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Customer Reviews -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Customer Reviews</h4>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Amit Kumar</h6>
+            <div class="rating text-warning">★★★★★</div>
+          </div>
+          <p class="mb-0">Excellent quality shirt! The fit is perfect and the fabric is very comfortable. Highly recommended for office wear.</p>
+        </div>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Rajesh Singh</h6>
+            <div class="rating text-warning">★★★★☆</div>
+          </div>
+          <p class="mb-0">Good quality shirt at reasonable price. The material is nice but could be slightly better stitched. Overall satisfied.</p>
+        </div>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Vikram Patel</h6>
+            <div class="rating text-warning">★★★★☆</div>
+          </div>
+          <p class="mb-0">Perfect for formal occasions. Fits well and looks professional. Would buy again in different colors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
+        <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
+        
+        <!-- Contact Info -->
+        <div class="footer-contact mt-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              243 Fashion Street, Mumbai, India
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              +91 2166946132
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              abhishek242443@gmail.com
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Quick Links Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter mt-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to get updates on new arrivals and special offers</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Store Information Column -->
+      <div class="col-lg-4 col-md-12">
+        <h5>Store Information</h5>
+        <div class="store-info">
+          
+          <div class="info-item">
+            <i class="fas fa-undo-alt"></i>
+            <div>
+              <h6>Easy Returns</h6>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-lock"></i>
+            <div>
+              <h6>Secure Payment</h6>
+              <p>100% secure transactions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy;    <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+    </div>
+  </div>
+</footer>
+
+  <button id="scrollTopBtn" class="btn btn-primary"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    document.querySelectorAll('.product-thumbnail').forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        const newSrc = this.getAttribute('data-full');
+        document.getElementById('mainProductImage').src = newSrc;
+        document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    function increaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+      }
+    }
+
+    function addToCart() {
+      const selectedSize = document.querySelector('input[name="size"]:checked').nextElementSibling.textContent;
+      const selectedColor = document.querySelector('input[name="color"]:checked').nextElementSibling.textContent;
+      const quantity = document.getElementById('quantity').value;
+      
+      alert(`Added to cart: Formal Men's Shirt\nSize: ${selectedSize}, Color: ${selectedColor}, Quantity: ${quantity}`);
+      
+      const cartCount = document.getElementById('cartCount');
+      if (cartCount) {
+        cartCount.textContent = parseInt(cartCount.textContent) + parseInt(quantity);
+      }
+    }
+
+    function buyNow() {
+      const selectedSize = document.querySelector('input[name="size"]:checked').nextElementSibling.textContent;
+      const selectedColor = document.querySelector('input[name="color"]:checked').nextElementSibling.textContent;
+      const quantity = document.getElementById('quantity').value;
+      
+      alert(`Proceeding to checkout: Formal Men's Shirt\nSize: ${selectedSize}, Color: ${selectedColor}, Quantity: ${quantity}`);
+      window.location.href = 'checkout.html';
+    }
+  </script>
+
+</body>
+</html>

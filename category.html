@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase Fashion | Categories</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-tshirt me-2"></i>ShopEase Fashion
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Categories Section -->
+  <section class="category-section">
+    <div class="container">
+      <h2 class="text-center mb-5 section-title">Shop by Category</h2>
+      <div class="row g-4">
+        <!-- Men's Fashion -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/mens-fashion.jpg" class="card-img-top" alt="Men's Fashion">
+            <div class="card-body text-center">
+              <h5>Men's Fashion</h5>
+              <p>Trendy clothing and accessories for men</p>
+              <a href="products.html?category=men" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Women's Fashion -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/womens-fashion.jpg" class="card-img-top" alt="Women's Fashion">
+            <div class="card-body text-center">
+              <h5>Women's Fashion</h5>
+              <p>Elegant outfits and accessories for women</p>
+              <a href="products.html?category=women" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footwear -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/footwear.jpg" class="card-img-top" alt="Footwear">
+            <div class="card-body text-center">
+              <h5>Footwear</h5>
+              <p>Stylish shoes for every occasion</p>
+              <a href="products.html?category=footwear" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Accessories -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/accessories.jpg" class="card-img-top" alt="Accessories">
+            <div class="card-body text-center">
+              <h5>Accessories</h5>
+              <p>Jewelry, bags, and fashion accessories</p>
+              <a href="products.html?category=accessories" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Kids Fashion -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/kids-fashion.jpg" class="card-img-top" alt="Kids Fashion">
+            <div class="card-body text-center">
+              <h5>Kids Fashion</h5>
+              <p>Adorable clothing for children</p>
+              <a href="products.html?category=kids" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Winter Collection -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/winter-collection.jpg" class="card-img-top" alt="Winter Collection">
+            <div class="card-body text-center">
+              <h5>Winter Collection</h5>
+              <p>Warm and stylish winter wear</p>
+              <a href="products.html?category=winter" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sports Wear -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/sports-wear.jpg" class="card-img-top" alt="Sports Wear">
+            <div class="card-body text-center">
+              <h5>Sports Wear</h5>
+              <p>Activewear for fitness enthusiasts</p>
+              <a href="products.html?category=sports" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Traditional Wear -->
+        <div class="col-md-3">
+          <div class="card category-card">
+            <img src="images/traditional-wear.jpg" class="card-img-top" alt="Traditional Wear">
+            <div class="card-body text-center">
+              <h5>Traditional Wear</h5>
+              <p>Ethnic and traditional clothing</p>
+              <a href="products.html?category=traditional" class="btn btn-outline-primary btn-sm">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subcategories Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 section-title">Browse by Subcategory</h2>
+      
+      <!-- Men's Subcategories -->
+      <div class="mb-5">
+        <h3 class="mb-4">Men's Fashion</h3>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Shirts</h5>
+                <p class="card-text">Formal and casual shirts</p>
+                <a href="products.html?category=men&subcategory=shirts" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">T-Shirts</h5>
+                <p class="card-text">Comfortable and stylish t-shirts</p>
+                <a href="products.html?category=men&subcategory=tshirts" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jeans</h5>
+                <p class="card-text">Denim in various fits</p>
+                <a href="products.html?category=men&subcategory=jeans" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Ethnic Wear</h5>
+                <p class="card-text">Traditional Indian clothing</p>
+                <a href="products.html?category=men&subcategory=ethnic" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Footwear Subcategories -->
+      <div class="mb-5">
+        <h3 class="mb-4">Footwear</h3>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Casual Shoes</h5>
+                <p class="card-text">Comfortable everyday shoes</p>
+                <a href="products.html?category=footwear&subcategory=casual" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Sports Shoes</h5>
+                <p class="card-text">For running and workouts</p>
+                <a href="products.html?category=footwear&subcategory=sports" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Formal Shoes</h5>
+                <p class="card-text">For office and formal events</p>
+                <a href="products.html?category=footwear&subcategory=formal" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Sandals</h5>
+                <p class="card-text">Comfortable open footwear</p>
+                <a href="products.html?category=footwear&subcategory=sandals" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accessories Subcategories -->
+      <div class="mb-5">
+        <h3 class="mb-4">Accessories</h3>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Bags</h5>
+                <p class="card-text">Handbags, backpacks and more</p>
+                <a href="products.html?category=accessories&subcategory=bags" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jewelry</h5>
+                <p class="card-text">Necklaces, earrings and bracelets</p>
+                <a href="products.html?category=accessories&subcategory=jewelry" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Watches</h5>
+                <p class="card-text">Fashion and luxury watches</p>
+                <a href="products.html?category=accessories&subcategory=watches" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Sunglasses</h5>
+                <p class="card-text">Stylish eyewear for all occasions</p>
+                <a href="products.html?category=accessories&subcategory=sunglasses" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Women's Subcategories -->
+      <div class="mb-5">
+        <h3 class="mb-4">Women's Fashion</h3>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Dresses</h5>
+                <p class="card-text">Casual and party dresses</p>
+                <a href="products.html?category=women&subcategory=dresses" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Tops</h5>
+                <p class="card-text">Stylish tops for every occasion</p>
+                <a href="products.html?category=women&subcategory=tops" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card subcategory-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Ethnic Wear</h5>
+                <p class="card-text">Sarees, salwar suits, and more</p>
+                <a href="products.html?category=women&subcategory=ethnic" class="btn btn-outline-primary btn-sm">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+            
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
+        <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
+        
+        <!-- Contact Info -->
+        <div class="footer-contact mt-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              243 Fashion Street, Mumbai, India
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              +91 2166946132
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              abhishek242443@gmail.com
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Quick Links Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter mt-4">
+           <h5>Newsletter</h5>
+          <p>Subscribe to get updates on new arrivals and special offers</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-12">
+        <h5>Store Information</h5>
+        <div class="store-info">
+          
+          <div class="info-item">
+            <i class="fas fa-undo-alt"></i>
+            <div>
+              <h6>Easy Returns</h6>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-lock"></i>
+            <div>
+              <h6>Secure Payment</h6>
+              <p>100% secure transactions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy;    <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- scroll top -->
+  <button id="scrollTopBtn" class="btn btn-primary"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

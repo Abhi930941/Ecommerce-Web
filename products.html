@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase Fashion | Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-tshirt me-2"></i>ShopEase Fashion
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Products Section -->
+  <div class="container-fluid py-5">
+    <div class="row">
+      
+      <!-- Sidebar Filters -->
+      <aside class="col-md-3">
+        <div class="card filter-box p-3">
+          <h5>Filter by Category</h5>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="men" id="cat1">
+            <label class="form-check-label" for="cat1">Men's Fashion</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="women" id="cat2">
+            <label class="form-check-label" for="cat2">Women's Fashion</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="footwear" id="cat3">
+            <label class="form-check-label" for="cat3">Footwear</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="accessories" id="cat4">
+            <label class="form-check-label" for="cat4">Accessories</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="kids" id="cat5">
+            <label class="form-check-label" for="cat5">Kids Fashion</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="winter" id="cat6">
+            <label class="form-check-label" for="cat6">Winter Collection</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="sports" id="cat7">
+            <label class="form-check-label" for="cat7">Sports Wear</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input category-filter" type="checkbox" value="traditional" id="cat8">
+            <label class="form-check-label" for="cat8">Traditional Wear</label>
+          </div>
+
+          <hr>
+
+          <h5>Filter by Price</h5>
+          <input type="range" class="form-range" min="500" max="10000" step="500" id="priceRange" value="10000">
+          <p>Max Price: ₹<span id="priceValue">10000</span></p>
+          
+          <div class="mt-3">
+            <button id="clearFilters" class="btn btn-outline-secondary btn-sm w-100">Clear All Filters</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Grid -->
+      <main class="col-md-9">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h3 id="categoryTitle">All Products</h3>
+            <p id="subcategoryTitle" class="text-muted mb-0"></p>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Sort by: Featured
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Featured</a></li>
+              <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+              <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+              <li><a class="dropdown-item" href="#">Newest First</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row g-4" id="productList">
+          <!-- Men's Fashion Products -->
+          <div class="col-md-4 product-card" data-category="men" data-subcategory="shirts" data-price="1299">
+            <div class="card">
+              <img src="images/mens-shirt.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Men's Shirt">
+              <div class="card-body">
+                <h6 class="card-title">Formal Men's Shirt</h6>
+                <div class="rating mb-2">★★★★☆ (4.2)</div>
+                <p class="price">₹1,299 <span class="original-price">₹1,799</span> <span class="discount">(28% off)</span></p>
+                <button onclick="addToCartAndRedirect('shirt1', 'Formal Men\'s Shirt', 1299, 'images/mens-shirt.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="men" data-subcategory="tshirts" data-price="899">
+            <div class="card">
+              <img src="images/mens-tshirt.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Men's T-Shirt">
+              <div class="card-body">
+                <h6 class="card-title">Casual Men's T-Shirt</h6>
+                <div class="rating mb-2">★★★★☆ (4.1)</div>
+                <p class="price">₹899 <span class="original-price">₹1,299</span> <span class="discount">(31% off)</span></p>
+                <button onclick="addToCartAndRedirect('tshirt1', 'Casual Men\'s T-Shirt', 899, 'images/mens-tshirt.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="men" data-subcategory="jeans" data-price="1599">
+            <div class="card">
+              <img src="images/mens-jeans.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Men's Jeans">
+              <div class="card-body">
+                <h6 class="card-title">Slim Fit Jeans</h6>
+                <div class="rating mb-2">★★★★☆ (4.3)</div>
+                <p class="price">₹1,599 <span class="original-price">₹2,199</span> <span class="discount">(27% off)</span></p>
+                <button onclick="addToCartAndRedirect('jeans1', 'Slim Fit Jeans', 1599, 'images/mens-jeans.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="men" data-subcategory="ethnic" data-price="2499">
+            <div class="card">
+              <img src="images/mens-kurta.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Men's Kurta">
+              <div class="card-body">
+                <h6 class="card-title">Traditional Men's Kurta</h6>
+                <div class="rating mb-2">★★★★☆ (4.4)</div>
+                <p class="price">₹2,499 <span class="original-price">₹3,499</span> <span class="discount">(29% off)</span></p>
+                <button onclick="addToCartAndRedirect('kurta1', 'Traditional Men\'s Kurta', 2499, 'images/mens-kurta.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Women's Fashion Products -->
+          <div class="col-md-4 product-card" data-category="women" data-subcategory="dresses" data-price="2499">
+            <div class="card">
+              <img src="images/womens-dress.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Women's Dress">
+              <div class="card-body">
+                <h6 class="card-title">Elegant Women's Dress</h6>
+                <div class="rating mb-2">★★★★★ (4.8)</div>
+                <p class="price">₹2,499 <span class="original-price">₹3,499</span> <span class="discount">(29% off)</span></p>
+                <button onclick="addToCartAndRedirect('dress1', 'Elegant Women\'s Dress', 2499, 'images/womens-dress.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="women" data-subcategory="tops" data-price="1299">
+            <div class="card">
+              <img src="images/womens-top.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Women's Top">
+              <div class="card-body">
+                <h6 class="card-title">Casual Women's Top</h6>
+                <div class="rating mb-2">★★★★☆ (4.4)</div>
+                <p class="price">₹1,299 <span class="original-price">₹1,799</span> <span class="discount">(28% off)</span></p>
+                <button onclick="addToCartAndRedirect('top1', 'Casual Women\'s Top', 1299, 'images/womens-top.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="women" data-subcategory="ethnic" data-price="3499">
+            <div class="card">
+              <img src="images/womens-saree.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Women's Saree">
+              <div class="card-body">
+                <h6 class="card-title">Traditional Saree</h6>
+                <div class="rating mb-2">★★★★☆ (4.6)</div>
+                <p class="price">₹3,499 <span class="original-price">₹4,999</span> <span class="discount">(30% off)</span></p>
+                <button onclick="addToCartAndRedirect('saree1', 'Traditional Saree', 3499, 'images/womens-saree.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="women" data-subcategory="western" data-price="1899">
+            <div class="card">
+              <img src="images/womens-western.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Women's Western Wear">
+              <div class="card-body">
+                <h6 class="card-title">Western Outfit</h6>
+                <div class="rating mb-2">★★★★☆ (4.3)</div>
+                <p class="price">₹1,899 <span class="original-price">₹2,499</span> <span class="discount">(24% off)</span></p>
+                <button onclick="addToCartAndRedirect('western1', 'Western Outfit', 1899, 'images/womens-western.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Footwear Products -->
+          <div class="col-md-4 product-card" data-category="footwear" data-subcategory="casual" data-price="1999">
+            <div class="card">
+              <img src="images/casual-shoes.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Casual Shoes">
+              <div class="card-body">
+                <h6 class="card-title">Casual Sneakers</h6>
+                <div class="rating mb-2">★★★★☆ (4.2)</div>
+                <p class="price">₹1,999 <span class="original-price">₹2,799</span> <span class="discount">(29% off)</span></p>
+                <button onclick="addToCartAndRedirect('casual1', 'Casual Sneakers', 1999, 'images/casual-shoes.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="footwear" data-subcategory="sports" data-price="3299">
+            <div class="card">
+              <img src="images/sports-shoes.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Sports Shoes">
+              <div class="card-body">
+                <h6 class="card-title">Sports Running Shoes</h6>
+                <div class="rating mb-2">★★★★☆ (4.3)</div>
+                <p class="price">₹3,299 <span class="original-price">₹4,299</span> <span class="discount">(23% off)</span></p>
+                <button onclick="addToCartAndRedirect('sports1', 'Sports Running Shoes', 3299, 'images/sports-shoes.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="footwear" data-subcategory="formal" data-price="2499">
+            <div class="card">
+              <img src="images/formal-shoes.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Formal Shoes">
+              <div class="card-body">
+                <h6 class="card-title">Leather Formal Shoes</h6>
+                <div class="rating mb-2">★★★★☆ (4.5)</div>
+                <p class="price">₹2,499 <span class="original-price">₹3,499</span> <span class="discount">(29% off)</span></p>
+                <button onclick="addToCartAndRedirect('formal1', 'Leather Formal Shoes', 2499, 'images/formal-shoes.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="footwear" data-subcategory="sandals" data-price="1299">
+            <div class="card">
+              <img src="images/sandals.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Sandals">
+              <div class="card-body">
+                <h6 class="card-title">Comfortable Sandals</h6>
+                <div class="rating mb-2">★★★★☆ (4.1)</div>
+                <p class="price">₹1,299 <span class="original-price">₹1,899</span> <span class="discount">(32% off)</span></p>
+                <button onclick="addToCartAndRedirect('sandals1', 'Comfortable Sandals', 1299, 'images/sandals.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Accessories Products -->
+          <div class="col-md-4 product-card" data-category="accessories" data-subcategory="bags" data-price="4999">
+            <div class="card">
+              <img src="images/handbag.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Handbag">
+              <div class="card-body">
+                <h6 class="card-title">Designer Handbag</h6>
+                <div class="rating mb-2">★★★★☆ (4.5)</div>
+                <p class="price">₹4,999 <span class="original-price">₹6,999</span> <span class="discount">(29% off)</span></p>
+                <button onclick="addToCartAndRedirect('bag1', 'Designer Handbag', 4999, 'images/handbag.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="accessories" data-subcategory="jewelry" data-price="1599">
+            <div class="card">
+              <img src="images/jewelry.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Jewelry">
+              <div class="card-body">
+                <h6 class="card-title">Gold Plated Jewelry Set</h6>
+                <div class="rating mb-2">★★★★☆ (4.4)</div>
+                <p class="price">₹1,599 <span class="original-price">₹2,299</span> <span class="discount">(30% off)</span></p>
+                <button onclick="addToCartAndRedirect('jewelry1', 'Gold Plated Jewelry Set', 1599, 'images/jewelry.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="accessories" data-subcategory="watches" data-price="899">
+            <div class="card">
+              <img src="images/watch.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Watch">
+              <div class="card-body">
+                <h6 class="card-title">Fashion Watch</h6>
+                <div class="rating mb-2">★★★★☆ (4.6)</div>
+                <p class="price">₹899 <span class="original-price">₹1,499</span> <span class="discount">(40% off)</span></p>
+                <button onclick="addToCartAndRedirect('watch1', 'Fashion Watch', 899, 'images/watch.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 product-card" data-category="accessories" data-subcategory="sunglasses" data-price="1299">
+            <div class="card">
+              <img src="images/sunglasses.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Sunglasses">
+              <div class="card-body">
+                <h6 class="card-title">Designer Sunglasses</h6>
+                <div class="rating mb-2">★★★★☆ (4.3)</div>
+                <p class="price">₹1,299 <span class="original-price">₹1,899</span> <span class="discount">(32% off)</span></p>
+                <button onclick="addToCartAndRedirect('sunglasses1', 'Designer Sunglasses', 1299, 'images/sunglasses.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kids Fashion Products -->
+          <div class="col-md-4 product-card" data-category="kids" data-subcategory="boys" data-price="799">
+            <div class="card">
+              <img src="images/kids-boys.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Boys Clothing">
+              <div class="card-body">
+                <h6 class="card-title">Boys T-Shirt & Shorts Set</h6>
+                <div class="rating mb-2">★★★★☆ (4.3)</div>
+                <p class="price">₹799 <span class="original-price">₹1,199</span> <span class="discount">(33% off)</span></p>
+                <button onclick="addToCartAndRedirect('kids1', 'Boys T-Shirt & Shorts Set', 799, 'images/kids-boys.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="kids" data-subcategory="girls" data-price="999">
+            <div class="card">
+              <img src="images/kids-girls.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Girls Dress">
+              <div class="card-body">
+                <h6 class="card-title">Girls Party Dress</h6>
+                <div class="rating mb-2">★★★★★ (4.7)</div>
+                <p class="price">₹999 <span class="original-price">₹1,499</span> <span class="discount">(33% off)</span></p>
+                <button onclick="addToCartAndRedirect('kids2', 'Girls Party Dress', 999, 'images/kids-girls.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="kids" data-subcategory="baby" data-price="699">
+            <div class="card">
+              <img src="images/kids-baby.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1522771930-78848d9293e8?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Baby Clothes">
+              <div class="card-body">
+                <h6 class="card-title">Baby Romper Set</h6>
+                <div class="rating mb-2">★★★★☆ (4.5)</div>
+                <p class="price">₹699 <span class="original-price">₹999</span> <span class="discount">(30% off)</span></p>
+                <button onclick="addToCartAndRedirect('kids3', 'Baby Romper Set', 699, 'images/kids-baby.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Winter Collection Products -->
+          <div class="col-md-4 product-card" data-category="winter" data-subcategory="jackets" data-price="2999">
+            <div class="card">
+              <img src="images/winter-jacket.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Winter Jacket">
+              <div class="card-body">
+                <h6 class="card-title">Warm Winter Jacket</h6>
+                <div class="rating mb-2">★★★★★ (4.8)</div>
+                <p class="price">₹2,999 <span class="original-price">₹4,299</span> <span class="discount">(30% off)</span></p>
+                <button onclick="addToCartAndRedirect('winter1', 'Warm Winter Jacket', 2999, 'images/winter-jacket.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="winter" data-subcategory="sweaters" data-price="1799">
+            <div class="card">
+              <img src="images/winter-sweater.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Woolen Sweater">
+              <div class="card-body">
+                <h6 class="card-title">Woolen Sweater</h6>
+                <div class="rating mb-2">★★★★☆ (4.4)</div>
+                <p class="price">₹1,799 <span class="original-price">₹2,499</span> <span class="discount">(28% off)</span></p>
+                <button onclick="addToCartAndRedirect('winter2', 'Woolen Sweater', 1799, 'images/winter-sweater.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="winter" data-subcategory="coats" data-price="3499">
+            <div class="card">
+              <img src="images/winter-coat.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Long Winter Coat">
+              <div class="card-body">
+                <h6 class="card-title">Long Winter Coat</h6>
+                <div class="rating mb-2">★★★★★ (4.7)</div>
+                <p class="price">₹3,499 <span class="original-price">₹4,999</span> <span class="discount">(30% off)</span></p>
+                <button onclick="addToCartAndRedirect('winter3', 'Long Winter Coat', 3499, 'images/winter-coat.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sports Wear Products -->
+          <div class="col-md-4 product-card" data-category="sports" data-subcategory="gym" data-price="1299">
+            <div class="card">
+              <img src="images/sports-gym.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Gym Wear">
+              <div class="card-body">
+                <h6 class="card-title">Gym Training Set</h6>
+                <div class="rating mb-2">★★★★☆ (4.4)</div>
+                <p class="price">₹1,299 <span class="original-price">₹1,899</span> <span class="discount">(32% off)</span></p>
+                <button onclick="addToCartAndRedirect('sports2', 'Gym Training Set', 1299, 'images/sports-gym.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="sports" data-subcategory="yoga" data-price="999">
+            <div class="card">
+              <img src="images/sports-yoga.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Yoga Wear">
+              <div class="card-body">
+                <h6 class="card-title">Yoga Outfit Set</h6>
+                <div class="rating mb-2">★★★★★ (4.6)</div>
+                <p class="price">₹999 <span class="original-price">₹1,499</span> <span class="discount">(33% off)</span></p>
+                <button onclick="addToCartAndRedirect('sports3', 'Yoga Outfit Set', 999, 'images/sports-yoga.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="sports" data-subcategory="tracksuit" data-price="1899">
+            <div class="card">
+              <img src="images/sports-tracksuit.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Track Suit">
+              <div class="card-body">
+                <h6 class="card-title">Premium Track Suit</h6>
+                <div class="rating mb-2">★★★★☆ (4.3)</div>
+                <p class="price">₹1,899 <span class="original-price">₹2,699</span> <span class="discount">(30% off)</span></p>
+                <button onclick="addToCartAndRedirect('sports4', 'Premium Track Suit', 1899, 'images/sports-tracksuit.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Traditional Wear Products -->
+          <div class="col-md-4 product-card" data-category="traditional" data-subcategory="ethnic" data-price="2999">
+            <div class="card">
+              <img src="images/traditional-kurta.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Ethnic Kurta">
+              <div class="card-body">
+                <h6 class="card-title">Designer Ethnic Kurta</h6>
+                <div class="rating mb-2">★★★★★ (4.7)</div>
+                <p class="price">₹2,999 <span class="original-price">₹4,299</span> <span class="discount">(30% off)</span></p>
+                <button onclick="addToCartAndRedirect('trad1', 'Designer Ethnic Kurta', 2999, 'images/traditional-kurta.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="traditional" data-subcategory="saree" data-price="3999">
+            <div class="card">
+              <img src="images/traditional-saree.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Designer Saree">
+              <div class="card-body">
+                <h6 class="card-title">Designer Silk Saree</h6>
+                <div class="rating mb-2">★★★★★ (4.8)</div>
+                <p class="price">₹3,999 <span class="original-price">₹5,999</span> <span class="discount">(33% off)</span></p>
+                <button onclick="addToCartAndRedirect('trad2', 'Designer Silk Saree', 3999, 'images/traditional-saree.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-card" data-category="traditional" data-subcategory="sherwani" data-price="4999">
+            <div class="card">
+              <img src="images/traditional-sherwani.jpg" 
+                   onerror="this.src='https://images.unsplash.com/photo-1605881528039-d0a39bbdee2c?w=400&h=300&fit=crop'" 
+                   class="card-img-top" alt="Wedding Sherwani">
+              <div class="card-body">
+                <h6 class="card-title">Wedding Sherwani</h6>
+                <div class="rating mb-2">★★★★★ (4.9)</div>
+                <p class="price">₹4,999 <span class="original-price">₹7,499</span> <span class="discount">(33% off)</span></p>
+                <button onclick="addToCartAndRedirect('trad3', 'Wedding Sherwani', 4999, 'images/traditional-sherwani.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
+        <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
+        
+        <!-- Contact Info -->
+        <div class="footer-contact mt-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              243 Fashion Street, Mumbai, India
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              +91 2166946132
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              abhishek242443@gmail.com
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Quick Links Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter mt-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to get updates on new arrivals and special offers</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Store Information Column -->
+      <div class="col-lg-4 col-md-12">
+        <h5>Store Information</h5>
+        <div class="store-info">
+          
+          <div class="info-item">
+            <i class="fas fa-undo-alt"></i>
+            <div>
+              <h6>Easy Returns</h6>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-lock"></i>
+            <div>
+              <h6>Secure Payment</h6>
+              <p>100% secure transactions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy;    <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+    </div>
+  </div>
+</footer>
+
+  <button id="scrollTopBtn" class="btn btn-primary"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const category = urlParams.get('category');
+      const subcategory = urlParams.get('subcategory');
+      
+      const categoryTitle = document.getElementById('categoryTitle');
+      const subcategoryTitle = document.getElementById('subcategoryTitle');
+      
+      // Category name mapping
+      const categoryNames = {
+        'men': "Men's Fashion",
+        'women': "Women's Fashion",
+        'footwear': 'Footwear',
+        'accessories': 'Accessories',
+        'kids': "Kids Fashion",
+        'winter': 'Winter Collection',
+        'sports': 'Sports Wear',
+        'traditional': 'Traditional Wear'
+      };
+      
+      if (category && subcategory) {
+        categoryTitle.textContent = categoryNames[category] || capitalizeFirstLetter(category);
+        subcategoryTitle.textContent = capitalizeFirstLetter(subcategory);
+        
+        const categoryCheckbox = document.querySelector(`input[value="${category}"]`);
+        if (categoryCheckbox) {
+          categoryCheckbox.checked = true;
+        }
+      } else if (category) {
+        categoryTitle.textContent = categoryNames[category] || capitalizeFirstLetter(category);
+        
+        const categoryCheckbox = document.querySelector(`input[value="${category}"]`);
+        if (categoryCheckbox) {
+          categoryCheckbox.checked = true;
+        }
+      }
+      
+      filterProductsByURL();
+      initProductFiltering();
+      
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+      
+      function filterProductsByURL() {
+        const products = document.querySelectorAll('.product-card');
+        
+        products.forEach(product => {
+          const productCategory = product.dataset.category;
+          const productSubcategory = product.dataset.subcategory;
+          
+          let showProduct = true;
+          
+          if (category && productCategory !== category) {
+            showProduct = false;
+          }
+          
+          if (subcategory && productSubcategory !== subcategory) {
+            showProduct = false;
+          }
+          
+          if (showProduct) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      }
+    });
+
+    function addToCartAndRedirect(productId, productName, price, image) {
+      let cart = JSON.parse(localStorage.getItem('shopEaseCart')) || [];
+      
+      const existingItem = cart.find(item => item.id === productId);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({
+          id: productId,
+          name: productName,
+          price: price,
+          image: image,
+          size: 'M',
+          quantity: 1
+        });
+      }
+      
+      localStorage.setItem('shopEaseCart', JSON.stringify(cart));
+      window.location.href = 'cart.html';
+    }
+  </script>
+
+</body>
+</html>

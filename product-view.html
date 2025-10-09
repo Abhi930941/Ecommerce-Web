@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase Fashion | Product View</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-tshirt me-2"></i>ShopEase Fashion
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Details -->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-gallery">
+          <img src="images/womens-dress.jpg" id="mainProductImage" class="img-fluid rounded shadow" alt="Elegant Women's Dress">
+          <div class="d-flex mt-3">
+            <img src="images/womens-dress.jpg" class="product-thumbnail active me-2" data-full="images/womens-dress.jpg" alt="Thumbnail 1">
+            <img src="images/womens-dress-2.jpg" class="product-thumbnail me-2" data-full="images/womens-dress-2.jpg" alt="Thumbnail 2">
+            <img src="images/womens-dress-3.jpg" class="product-thumbnail me-2" data-full="images/womens-dress-3.jpg" alt="Thumbnail 3">
+            <img src="images/womens-dress-4.jpg" class="product-thumbnail" data-full="images/womens-dress-4.jpg" alt="Thumbnail 4">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-info">
+          <h2 class="product-title">Elegant Women's Dress</h2>
+          <div class="rating mb-3">
+            <span class="text-warning">★★★★★</span> (4.8) 128 Reviews
+          </div>
+          <div class="price-section mb-3">
+            <h3 class="text-primary">₹2,499</h3>
+            <p class="text-muted"><s>₹3,499</s> <span class="text-success">29% off</span></p>
+          </div>
+          <p class="product-description">This elegant women's dress is perfect for parties and special occasions. Made with high-quality fabric that ensures comfort and style. Features a flattering A-line silhouette and delicate embroidery details.</p>
+          
+          <div class="mb-4">
+            <h5>Size</h5>
+            <div class="size-options">
+              <input type="radio" class="btn-check" name="size" id="size-s" checked>
+              <label class="btn btn-outline-primary" for="size-s">S</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-m">
+              <label class="btn btn-outline-primary" for="size-m">M</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-l">
+              <label class="btn btn-outline-primary" for="size-l">L</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-xl">
+              <label class="btn btn-outline-primary" for="size-xl">XL</label>
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <h5>Color</h5>
+            <div class="size-options">
+              <input type="radio" class="btn-check" name="color" id="color-red" checked>
+              <label class="btn btn-outline-primary" for="color-red">Red</label>
+              
+              <input type="radio" class="btn-check" name="color" id="color-blue">
+              <label class="btn btn-outline-primary" for="color-blue">Blue</label>
+              
+              <input type="radio" class="btn-check" name="color" id="color-black">
+              <label class="btn btn-outline-primary" for="color-black">Black</label>
+            </div>
+          </div>
+          
+          <div class="d-flex gap-3 mb-4">
+            <div class="quantity-selector">
+              <label for="quantity" class="form-label">Quantity</label>
+              <div class="d-flex align-items-center">
+                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex gap-3 mb-4">
+            <button class="btn btn-primary btn-lg flex-grow-1" onclick="addToCart()">
+              Add to Cart
+            </button>
+            <button class="btn btn-outline-primary btn-lg" onclick="buyNow()">Buy Now</button>
+          </div>
+          
+          <div class="mt-4">
+            <h5>Product Details</h5>
+            <ul>
+              <li>Material: 100% Cotton</li>
+              <li>Care: Machine Wash</li>
+              <li>Fit: Regular Fit</li>
+              <li>Length: Knee Length</li>
+              <li>Pattern: Solid</li>
+              <li>Neck: Round Neck</li>
+              <li>Sleeve: Half Sleeve</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Product Description -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Product Description</h4>
+        <p>This elegant women's dress is crafted from premium quality cotton fabric that offers both comfort and style. The dress features a regular fit design that flatters all body types. Perfect for parties, weddings, and special occasions, this dress will make you stand out in the crowd.</p>
+        <p>The dress comes in multiple vibrant colors and sizes to suit your preferences. With its knee-length design and solid pattern, it's a versatile addition to your wardrobe that can be dressed up or down depending on the occasion.</p>
+        
+        <h5 class="mt-4">Features:</h5>
+        <ul>
+          <li>Premium quality cotton fabric for comfort</li>
+          <li>Regular fit that flatters all body types</li>
+          <li>Knee-length design for versatility</li>
+          <li>Available in multiple colors and sizes</li>
+          <li>Easy care - machine washable</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Customer Reviews -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Customer Reviews</h4>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Priya Sharma</h6>
+            <div class="rating text-warning">★★★★★</div>
+          </div>
+          <p class="mb-0">Absolutely love this dress! The fit is perfect and the quality is excellent. Received many compliments when I wore it to a wedding.</p>
+        </div>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Rahul Verma</h6>
+            <div class="rating text-warning">★★★★☆</div>
+          </div>
+          <p class="mb-0">Bought this for my wife. She loved the design and comfort. The only reason for 4 stars is that the delivery took a bit longer than expected.</p>
+        </div>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Anjali Patel</h6>
+            <div class="rating text-warning">★★★★★</div>
+          </div>
+          <p class="mb-0">Perfect dress for summer parties! The fabric is breathable and the fit is just right. Will definitely purchase again.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Related Products -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Related Products</h4>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/womens-top.jpg" class="card-img-top" alt="Women's Top">
+              <div class="card-body">
+                <h6 class="card-title">Casual Women's Top</h6>
+                <div class="rating mb-2">★★★★☆ (4.4)</div>
+                <p class="price">₹1,899 <span class="original-price">₹2,499</span> <span class="discount">(24% off)</span></p>
+                <a href="product-view.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/womens-skirt.jpg" class="card-img-top" alt="Women's Skirt">
+              <div class="card-body">
+                <h6 class="card-title">Women's A-Line Skirt</h6>
+                <div class="rating mb-2">★★★★☆ (4.1)</div>
+                <p class="price">₹1,599 <span class="original-price">₹2,199</span> <span class="discount">(27% off)</span></p>
+                <a href="product-view.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/womens-blouse.jpg" class="card-img-top" alt="Women's Blouse">
+              <div class="card-body">
+                <h6 class="card-title">Designer Blouse</h6>
+                <div class="rating mb-2">★★★★☆ (4.3)</div>
+                <p class="price">₹1,299 <span class="original-price">₹1,799</span> <span class="discount">(28% off)</span></p>
+                <a href="product-view.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/womens-jumpsuit.jpg" class="card-img-top" alt="Women's Jumpsuit">
+              <div class="card-body">
+                <h6 class="card-title">Women's Jumpsuit</h6>
+                <div class="rating mb-2">★★★★☆ (4.5)</div>
+                <p class="price">₹2,199 <span class="original-price">₹2,999</span> <span class="discount">(27% off)</span></p>
+                <a href="product-view.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
+        <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
+        
+        <!-- Contact Info -->
+        <div class="footer-contact mt-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              243 Fashion Street, Mumbai, India
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              +91 2166946132
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              abhishek242443@gmail.com
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Quick Links Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter mt-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to get updates on new arrivals and special offers</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Store Information Column -->
+      <div class="col-lg-4 col-md-12">
+        <h5>Store Information</h5>
+        <div class="store-info">
+          
+          <div class="info-item">
+            <i class="fas fa-undo-alt"></i>
+            <div>
+              <h6>Easy Returns</h6>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-lock"></i>
+            <div>
+              <h6>Secure Payment</h6>
+              <p>100% secure transactions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy;    <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="btn btn-primary"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+  <script>
+    // Product gallery functionality
+    document.querySelectorAll('.product-thumbnail').forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        const newSrc = this.getAttribute('data-full');
+        document.getElementById('mainProductImage').src = newSrc;
+        
+        // Update active thumbnail
+        document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Quantity functionality
+    function increaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+      }
+    }
+
+    // Add to cart functionality
+    function addToCart() {
+      const selectedSize = document.querySelector('input[name="size"]:checked').nextElementSibling.textContent;
+      const selectedColor = document.querySelector('input[name="color"]:checked').nextElementSibling.textContent;
+      const quantity = document.getElementById('quantity').value;
+      
+      alert(`Added to cart: Elegant Women's Dress\nSize: ${selectedSize}, Color: ${selectedColor}, Quantity: ${quantity}`);
+      
+      // Update cart count
+      const cartCount = document.getElementById('cartCount');
+      if (cartCount) {
+        cartCount.textContent = parseInt(cartCount.textContent) + parseInt(quantity);
+      }
+    }
+
+    function buyNow() {
+      const selectedSize = document.querySelector('input[name="size"]:checked').nextElementSibling.textContent;
+      const selectedColor = document.querySelector('input[name="color"]:checked').nextElementSibling.textContent;
+      const quantity = document.getElementById('quantity').value;
+      
+      alert(`Proceeding to checkout: Elegant Women's Dress\nSize: ${selectedSize}, Color: ${selectedColor}, Quantity: ${quantity}`);
+      window.location.href = 'checkout.html';
+    }
+  </script>
+
+</body>
+</html>

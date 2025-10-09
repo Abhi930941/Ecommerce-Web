@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Running Shoes | ShopEase Fashion</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-tshirt me-2"></i>ShopEase Fashion
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-gallery">
+          <img src="images/sports-shoes.jpg" id="mainProductImage" class="img-fluid rounded shadow" alt="Sports Running Shoes">
+          <div class="d-flex mt-3">
+            <img src="images/sports-shoes.jpg" class="product-thumbnail active me-2" data-full="images/sports-shoes.jpg" alt="Front View">
+            <img src="images/sports-shoes-2.jpg" class="product-thumbnail me-2" data-full="images/sports-shoes-2.jpg" alt="Top View">
+            <img src="images/sports-shoes-3.jpg" class="product-thumbnail me-2" data-full="images/sports-shoes-3.jpg" alt="Sole View">
+            <img src="images/sports-shoes-4.jpg" class="product-thumbnail" data-full="images/sports-shoes-4.jpg" alt="Lifestyle">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-info">
+          <h2 class="product-title">Sports Running Shoes</h2>
+          <div class="rating mb-3">
+            <span class="text-warning">★★★★☆</span> (4.3) 156 Reviews
+          </div>
+          <div class="price-section mb-3">
+            <h3 class="text-primary">₹3,299</h3>
+            <p class="text-muted"><s>₹4,299</s> <span class="text-success">23% off</span></p>
+          </div>
+          <p class="product-description">Premium sports running shoes with advanced cushioning technology. Designed for runners and fitness enthusiasts. Features breathable mesh upper and anti-slip rubber sole for maximum performance.</p>
+          
+          <div class="mb-4">
+            <h5>Size</h5>
+            <div class="size-options">
+              <input type="radio" class="btn-check" name="size" id="size-6">
+              <label class="btn btn-outline-primary" for="size-6">6</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-7">
+              <label class="btn btn-outline-primary" for="size-7">7</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-8" checked>
+              <label class="btn btn-outline-primary" for="size-8">8</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-9">
+              <label class="btn btn-outline-primary" for="size-9">9</label>
+              
+              <input type="radio" class="btn-check" name="size" id="size-10">
+              <label class="btn btn-outline-primary" for="size-10">10</label>
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <h5>Color</h5>
+            <div class="size-options">
+              <input type="radio" class="btn-check" name="color" id="color-black" checked>
+              <label class="btn btn-outline-primary" for="color-black">Black</label>
+              
+              <input type="radio" class="btn-check" name="color" id="color-blue">
+              <label class="btn btn-outline-primary" for="color-blue">Blue</label>
+              
+              <input type="radio" class="btn-check" name="color" id="color-red">
+              <label class="btn btn-outline-primary" for="color-red">Red</label>
+            </div>
+          </div>
+          
+          <div class="d-flex gap-3 mb-4">
+            <div class="quantity-selector">
+              <label for="quantity" class="form-label">Quantity</label>
+              <div class="d-flex align-items-center">
+                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex gap-3 mb-4">
+            <button class="btn btn-primary btn-lg flex-grow-1" onclick="addToCart()">Add to Cart</button>
+            <button class="btn btn-outline-primary btn-lg" onclick="buyNow()">Buy Now</button>
+          </div>
+          
+          <div class="mt-4">
+            <h5>Product Details</h5>
+            <ul>
+              <li>Material: Mesh + Synthetic</li>
+              <li>Sole: EVA + Rubber</li>
+              <li>Closure: Lace-Up</li>
+              <li>Technology: Air Cushioning</li>
+              <li>Ideal For: Running, Gym, Sports</li>
+              <li>Water Resistant: Yes</li>
+              <li>Weight: 280g (approx.)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Product Description</h4>
+        <p>Experience superior comfort and performance with these premium sports running shoes. Engineered with advanced air cushioning technology that absorbs impact and provides excellent energy return with every step. The breathable mesh upper keeps your feet cool during intense workouts.</p>
+        <p>The anti-slip rubber outsole provides exceptional grip on various surfaces, while the ergonomic design ensures proper foot support. Perfect for running, gym workouts, and outdoor activities.</p>
+        
+        <h5 class="mt-4">Features:</h5>
+        <ul>
+          <li>Advanced air cushioning for impact absorption</li>
+          <li>Breathable mesh upper for ventilation</li>
+          <li>Anti-slip rubber sole for superior grip</li>
+          <li>Lightweight design for agility</li>
+          <li>Arch support for comfort</li>
+          <li>Water-resistant construction</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Customer Reviews</h4>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Rohan Sharma</h6>
+            <div class="rating text-warning">★★★★★</div>
+          </div>
+          <p class="mb-0">Best running shoes I've ever bought! Very comfortable and lightweight. Perfect for my daily 5km runs.</p>
+        </div>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Arjun Patel</h6>
+            <div class="rating text-warning">★★★★☆</div>
+          </div>
+          <p class="mb-0">Good quality shoes with excellent cushioning. Slightly expensive but worth the investment for serious runners.</p>
+        </div>
+        <div class="review-card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h6>Karan Singh</h6>
+            <div class="rating text-warning">★★★★☆</div>
+          </div>
+          <p class="mb-0">Great shoes for gym workouts. The grip is excellent and they look stylish too. Highly recommend!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
+        <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
+        
+        <!-- Contact Info -->
+        <div class="footer-contact mt-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              243 Fashion Street, Mumbai, India
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              +91 2166946132
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              abhishek242443@gmail.com
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Quick Links Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter mt-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to get updates on new arrivals and special offers</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Store Information Column -->
+      <div class="col-lg-4 col-md-12">
+        <h5>Store Information</h5>
+        <div class="store-info">
+          
+          <div class="info-item">
+            <i class="fas fa-undo-alt"></i>
+            <div>
+              <h6>Easy Returns</h6>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-lock"></i>
+            <div>
+              <h6>Secure Payment</h6>
+              <p>100% secure transactions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy;    <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+    </div>
+  </div>
+</footer>
+
+  <button id="scrollTopBtn" class="btn btn-primary"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    document.querySelectorAll('.product-thumbnail').forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        const newSrc = this.getAttribute('data-full');
+        document.getElementById('mainProductImage').src = newSrc;
+        document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    function increaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+      }
+    }
+
+    function addToCart() {
+      const selectedSize = document.querySelector('input[name="size"]:checked').nextElementSibling.textContent;
+      const selectedColor = document.querySelector('input[name="color"]:checked').nextElementSibling.textContent;
+      const quantity = document.getElementById('quantity').value;
+      
+      alert(`Added to cart: Sports Running Shoes\nSize: ${selectedSize}, Color: ${selectedColor}, Quantity: ${quantity}`);
+      
+      const cartCount = document.getElementById('cartCount');
+      if (cartCount) {
+        cartCount.textContent = parseInt(cartCount.textContent) + parseInt(quantity);
+      }
+    }
+
+    function buyNow() {
+      window.location.href = 'checkout.html';
+    }
+  </script>
+
+</body>
+</html>

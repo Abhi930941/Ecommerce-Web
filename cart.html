@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase Fashion | Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-tshirt me-2"></i>ShopEase Fashion
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Section -->
+  <div class="container py-5">
+    <h2 class="mb-4">Shopping Cart</h2>
+    
+    <div class="row">
+      <div class="col-md-8">
+        <div id="cartItems">
+          <!-- Cart items will be dynamically loaded -->
+        </div>
+        
+        <div class="d-flex justify-content-between mt-4">
+          <a href="products.html" class="btn btn-outline-primary">Continue Shopping</a>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="cart-summary">
+          <h5 class="card-title">Cart Summary</h5>
+          <div class="d-flex justify-content-between mb-2">
+            <span>Subtotal:</span>
+            <span>₹<span id="cartSubtotal">0</span></span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>Shipping:</span>
+            <span>₹<span id="shipping">0</span></span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>Tax (9%):</span>
+            <span>₹<span id="tax">0</span></span>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between mb-3">
+            <strong>Total:</strong>
+            <strong>₹<span id="cartTotal">0</span></strong>
+          </div>
+          <a href="checkout.html" class="btn btn-primary w-100" id="checkoutBtn">Proceed to Checkout</a>
+        </div>
+        
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Apply Coupon</h5>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Enter coupon code" id="couponInput">
+              <button class="btn btn-outline-primary" type="button" onclick="applyCoupon()">Apply</button>
+            </div>
+            <small class="text-muted">Available coupons: SAVE10, WELCOME20</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recently Viewed Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="mb-4">You Might Also Like</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card">
+            <img src="images/mens-shirt.jpg" class="card-img-top" alt="Men's Shirt">
+            <div class="card-body">
+              <h6 class="card-title">Formal Men's Shirt</h6>
+              <div class="rating mb-2">★★★★☆ (4.2)</div>
+              <p class="price">₹1,299 <span class="original-price">₹1,799</span> <span class="discount">(28% off)</span></p>
+              <button onclick="addToCartAndRedirect('shirt1', 'Formal Men\'s Shirt', 1299, 'images/mens-shirt.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card product-card">
+            <img src="images/sports-shoes.jpg" class="card-img-top" alt="Sports Shoes">
+            <div class="card-body">
+              <h6 class="card-title">Sports Running Shoes</h6>
+              <div class="rating mb-2">★★★★☆ (4.3)</div>
+              <p class="price">₹3,299 <span class="original-price">₹4,299</span> <span class="discount">(23% off)</span></p>
+              <button onclick="addToCartAndRedirect('sports1', 'Sports Running Shoes', 3299, 'images/sports-shoes.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card product-card">
+            <img src="images/handbag.jpg" class="card-img-top" alt="Handbag">
+            <div class="card-body">
+              <h6 class="card-title">Designer Handbag</h6>
+              <div class="rating mb-2">★★★★☆ (4.5)</div>
+              <p class="price">₹4,999 <span class="original-price">₹6,999</span> <span class="discount">(29% off)</span></p>
+              <button onclick="addToCartAndRedirect('bag1', 'Designer Handbag', 4999, 'images/handbag.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card product-card">
+            <img src="images/watch.jpg" class="card-img-top" alt="Watch">
+            <div class="card-body">
+              <h6 class="card-title">Fashion Watch</h6>
+              <div class="rating mb-2">★★★★☆ (4.6)</div>
+              <p class="price">₹899 <span class="original-price">₹1,499</span> <span class="discount">(40% off)</span></p>
+              <button onclick="addToCartAndRedirect('watch1', 'Fashion Watch', 899, 'images/watch.jpg')" class="btn btn-primary btn-sm w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
+        <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
+        
+        <!-- Contact Info -->
+        <div class="footer-contact mt-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              243 Fashion Street, Mumbai, India
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              +91 2166946132
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              abhishek242443@gmail.com
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Quick Links Column -->
+      <div class="col-lg-4 col-md-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter mt-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to get updates on new arrivals and special offers</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Store Information Column -->
+      <div class="col-lg-4 col-md-12">
+        <h5>Store Information</h5>
+        <div class="store-info">
+          
+          <div class="info-item">
+            <i class="fas fa-undo-alt"></i>
+            <div>
+              <h6>Easy Returns</h6>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-lock"></i>
+            <div>
+              <h6>Secure Payment</h6>
+              <p>100% secure transactions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy;    <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+    </div>
+  </div>
+</footer>
+
+  <button id="scrollTopBtn" class="btn btn-primary"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    function applyCoupon() {
+      const couponInput = document.getElementById('couponInput');
+      const code = couponInput.value.toUpperCase().trim();
+      
+      if (code === 'SAVE10') {
+        alert('Coupon applied! You saved 10%');
+      } else if (code === 'WELCOME20') {
+        alert('Coupon applied! You saved 20%');
+      } else if (code) {
+        alert('Invalid coupon code');
+      }
+    }
+
+    function addToCartAndRedirect(productId, productName, price, image) {
+      let cart = JSON.parse(localStorage.getItem('shopEaseCart')) || [];
+      
+      const existingItem = cart.find(item => item.id === productId);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({
+          id: productId,
+          name: productName,
+          price: price,
+          image: image,
+          size: 'M',
+          quantity: 1
+        });
+      }
+      
+      localStorage.setItem('shopEaseCart', JSON.stringify(cart));
+      
+      // Reload page to show updated cart
+      window.location.reload();
+    }
+  </script>
+
+</body>
+</html>
