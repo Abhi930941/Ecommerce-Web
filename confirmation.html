@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -32,13 +31,11 @@
     </div>
   </nav>
 
-  <!-- Confirmation Section -->
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="card shadow-lg border-0">
           <div class="card-body p-5">
-            <!-- Success Icon -->
             <div class="text-center mb-4">
               <div class="success-checkmark mx-auto mb-4">
                 <i class="fas fa-check-circle text-success" style="font-size: 80px;"></i>
@@ -47,7 +44,6 @@
               <p class="text-muted">Thank you for shopping with ShopEase Fashion. Your order has been confirmed.</p>
             </div>
 
-            <!-- Order Details -->
             <div class="row mb-4">
               <div class="col-md-12">
                 <div class="card bg-light">
@@ -76,7 +72,6 @@
               </div>
             </div>
 
-            <!-- Shipping Address -->
             <div class="row mb-4">
               <div class="col-md-6">
                 <div class="card">
@@ -87,7 +82,6 @@
                     <p class="mb-1"><strong id="customerName">Customer Name</strong></p>
                     <p class="mb-1" id="address">123 Fashion Street</p>
                     <p class="mb-1" id="cityState">Mumbai, Maharashtra 400001</p>
-                    <p class="mb-0"><strong>Phone:</strong> <span id="phone">+91 1234567890</span></p>
                   </div>
                 </div>
               </div>
@@ -106,7 +100,6 @@
               </div>
             </div>
 
-            <!-- Order Items -->
             <div class="row mb-4">
               <div class="col-md-12">
                 <div class="card">
@@ -125,7 +118,9 @@
                           </tr>
                         </thead>
                         <tbody id="orderItemsList">
-                          <!-- Items will be loaded here -->
+                          <tr>
+                            <td colspan="4" class="text-center">Loading order items...</td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -157,7 +152,6 @@
               </div>
             </div>
 
-            <!-- Action Buttons -->
             <div class="text-center">
               <a href="index.html" class="btn btn-primary btn-lg me-2">
                 <i class="fas fa-home me-2"></i>Back to Home
@@ -172,89 +166,72 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
-  <div class="container">
-    <div class="row">
-      <!-- Brand Column -->
-      <div class="col-lg-4 col-md-6">
-        <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
-        <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
-        
-        <!-- Contact Info -->
-        <div class="footer-contact mt-4">
-          <h5>Contact Info</h5>
-          <ul>
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              243 Fashion Street, Mumbai, India
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              +91 2166946132
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              abhishek242443@gmail.com
-            </ul>
-        </div>
-      </div>
-      
-      <!-- Quick Links Column -->
-      <div class="col-lg-4 col-md-6">
-        <h5>Quick Links</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">All Products</a></li>
-          <li><a href="category.html">Categories</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        
-        <!-- Newsletter -->
-        <div class="footer-newsletter mt-4">
-          <h5>Newsletter</h5>
-          <p>Subscribe to get updates on new arrivals and special offers</p>
-          <div class="input-group">
-            <input type="email" class="form-control" placeholder="Your email">
-            <button class="btn btn-primary" type="button">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Store Information Column -->
-      <div class="col-lg-4 col-md-12">
-        <h5>Store Information</h5>
-        <div class="store-info">
-          
-          <div class="info-item">
-            <i class="fas fa-undo-alt"></i>
-            <div>
-              <h6>Easy Returns</h6>
-              <p>30-day return policy</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-lock"></i>
-            <div>
-              <h6>Secure Payment</h6>
-              <p>100% secure transactions</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
     <div class="container">
-      <p>&copy;    <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <h5><i class="fas fa-tshirt me-2"></i>ShopEase Fashion</h5>
+          <p>Your one-stop destination for trendy fashion and accessories. Quality meets affordability.</p>
+          
+          <div class="footer-contact mt-4">
+            <h5>Contact Info</h5>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 243 Fashion Street, Mumbai, India</li>
+              <li><i class="fas fa-envelope"></i> abhishek242443@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          
+          <div class="footer-newsletter mt-4">
+            <h5>Newsletter</h5>
+            <p>Subscribe to get updates on new arrivals and special offers</p>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your email">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-12">
+          <h5>Store Information</h5>
+          <div class="store-info">
+            <div class="info-item">
+              <i class="fas fa-undo-alt"></i>
+              <div>
+                <h6>Easy Returns</h6>
+                <p>30-day return policy</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-lock"></i>
+              <div>
+                <h6>Secure Payment</h6>
+                <p>100% secure transactions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <a href="index.html">ShopEase Fashion</a>. All rights reserved. | Designed by Sahani Abhishek</p>
+      </div>
+    </div>
+  </footer>
 
   <button id="scrollTopBtn" class="btn btn-primary"><i class="fas fa-chevron-up"></i></button>
 
@@ -262,8 +239,27 @@
   <script src="js/script.js"></script>
   
   <script>
+    // Debug function to check localStorage
+    function debugOrderData() {
+      console.log('=== DEBUGGING ORDER DATA ===');
+      console.log('lastOrder:', localStorage.getItem('lastOrder'));
+      console.log('shopEaseCart:', localStorage.getItem('shopEaseCart'));
+      
+      const orderData = localStorage.getItem('lastOrder');
+      if (orderData) {
+        try {
+          const parsed = JSON.parse(orderData);
+          console.log('Parsed order data:', parsed);
+          console.log('Order items:', parsed.items);
+        } catch (e) {
+          console.error('Error parsing order data:', e);
+        }
+      }
+    }
+    
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('Confirmation page loaded');
+      // Debug first
+      debugOrderData();
       
       // Generate order number
       const orderNum = 'ORD' + Math.floor(Math.random() * 900000 + 100000);
@@ -274,23 +270,45 @@
       const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
       document.getElementById('orderDate').textContent = today.toLocaleDateString('en-IN', dateOptions);
       
-      // Get order data from localStorage
-      let orderData = JSON.parse(localStorage.getItem('lastOrder'));
-      console.log('Order Data:', orderData);
+      // Try to get order data from localStorage
+      let orderDataStr = localStorage.getItem('lastOrder');
       
-      if (!orderData || !orderData.items || orderData.items.length === 0) {
-        console.log('No order data found, redirecting to home');
-        alert('No order data found. Redirecting to home page.');
+      console.log('Order data string:', orderDataStr);
+      
+      if (!orderDataStr) {
+        console.error('No order data in localStorage!');
+        alert('No order found. Redirecting to home page.');
         window.location.href = 'index.html';
         return;
       }
       
-      // Display customer information
+      let orderData;
+      try {
+        orderData = JSON.parse(orderDataStr);
+        console.log('Parsed order data successfully:', orderData);
+      } catch (e) {
+        console.error('Error parsing order data:', e);
+        alert('Error loading order. Redirecting to home page.');
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      // Check if items exist
+      if (!orderData.items || !Array.isArray(orderData.items) || orderData.items.length === 0) {
+        console.error('No items in order!', orderData);
+        alert('No items in order. Redirecting to home page.');
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      console.log('Order items found:', orderData.items.length);
+      
+      // Display customer info
       if (orderData.customer) {
         document.getElementById('customerName').textContent = orderData.customer.name || 'Customer';
         document.getElementById('address').textContent = orderData.customer.address || '123 Fashion Street';
-        document.getElementById('cityState').textContent = `${orderData.customer.city || 'Mumbai'}, ${orderData.customer.state || 'Maharashtra'} ${orderData.customer.zip || '400001'}`;
-        document.getElementById('phone').textContent = orderData.customer.phone || '+91 1234567890';
+        document.getElementById('cityState').textContent = 
+          `${orderData.customer.city || 'Mumbai'}, ${orderData.customer.state || 'Maharashtra'} ${orderData.customer.zip || '400001'}`;
       }
       
       // Display payment method
@@ -298,54 +316,71 @@
         document.getElementById('paymentMethod').textContent = orderData.paymentMethod;
       }
       
-      // Display order items
+      // Display order items and calculate totals
       const orderItemsList = document.getElementById('orderItemsList');
       let subtotal = 0;
       
-      if (orderData.items && orderData.items.length > 0) {
-        orderItemsList.innerHTML = orderData.items.map(item => {
-          const itemTotal = item.price * item.quantity;
-          subtotal += itemTotal;
-          
-          return `
-            <tr>
-              <td>
-                <div class="d-flex align-items-center">
-                  <img src="${item.image}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; margin-right: 10px;" alt="${item.name}">
-                  <span>${item.name}</span>
-                </div>
-              </td>
-              <td>${item.size}</td>
-              <td>${item.quantity}</td>
-              <td class="text-end">₹${itemTotal}</td>
-            </tr>
-          `;
-        }).join('');
-        
-        // Calculate totals
-        const shipping = subtotal > 999 ? 0 : 99;
-        const tax = Math.round(subtotal * 0.09);
-        const total = subtotal + shipping + tax;
-        
-        // Display amounts
-        document.getElementById('subtotalAmount').textContent = subtotal;
-        document.getElementById('shippingAmount').textContent = shipping;
-        document.getElementById('taxAmount').textContent = tax;
-        document.getElementById('totalAmount').textContent = total;
-        document.getElementById('finalTotal').textContent = total;
-      } else {
-        orderItemsList.innerHTML = '<tr><td colspan="4" class="text-center">No items found</td></tr>';
-      }
+      let itemsHTML = '';
       
-      // Update cart count (should be 0 after order)
+      orderData.items.forEach((item, index) => {
+        console.log(`Processing item ${index}:`, item);
+        
+        const itemPrice = Number(item.price) || 0;
+        const itemQty = Number(item.quantity) || 1;
+        const itemTotal = itemPrice * itemQty;
+        
+        subtotal += itemTotal;
+        
+        console.log(`Item ${index}: price=${itemPrice}, qty=${itemQty}, total=${itemTotal}`);
+        
+        itemsHTML += `
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img src="${item.image || 'https://via.placeholder.com/50'}" 
+                     onerror="this.src='https://via.placeholder.com/50'" 
+                     style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; margin-right: 10px;" 
+                     alt="${item.name}">
+                <span>${item.name || 'Product'}</span>
+              </div>
+            </td>
+            <td>${item.size || 'M'}</td>
+            <td>${itemQty}</td>
+            <td class="text-end"><strong>₹${itemTotal}</strong></td>
+          </tr>
+        `;
+      });
+      
+      orderItemsList.innerHTML = itemsHTML;
+      
+      console.log('Total subtotal:', subtotal);
+      
+      // Calculate totals
+      const shipping = subtotal > 999 ? 0 : 99;
+      const tax = Math.round(subtotal * 0.09);
+      const total = subtotal + shipping + tax;
+      
+      console.log('Calculated amounts:', { subtotal, shipping, tax, total });
+      
+      // Update all amount fields
+      document.getElementById('subtotalAmount').textContent = subtotal;
+      document.getElementById('shippingAmount').textContent = shipping;
+      document.getElementById('taxAmount').textContent = tax;
+      document.getElementById('totalAmount').textContent = total;
+      document.getElementById('finalTotal').textContent = total;
+      
+      // Update cart count
+      updateCartCount();
+    });
+    
+    function updateCartCount() {
       const cartCount = document.getElementById('cartCount');
       if (cartCount) {
         const cartData = JSON.parse(localStorage.getItem('shopEaseCart')) || [];
         const totalItems = cartData.reduce((sum, item) => sum + item.quantity, 0);
         cartCount.textContent = totalItems;
       }
-    });
+    }
   </script>
-
 </body>
 </html>

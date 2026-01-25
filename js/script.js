@@ -1,5 +1,3 @@
-// ShopEase Fashion - JavaScript Functionality
-
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize cart count
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Cart functionality
 let cart = JSON.parse(localStorage.getItem('shopEaseCart')) || [];
 
-// NEW: Add to cart and redirect function
+// Add to cart and redirect function
 function addToCartAndRedirect(productId, productName, price, image) {
   // Get cart from localStorage
   let cart = JSON.parse(localStorage.getItem('shopEaseCart')) || [];
